@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="chat.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat application</title>
+</head>
+<body>
+    <form id="form">
+        <div class="form-row">
+            <div class="input-container">
+                <p>Enter your nickname:</p>
+                <input type="text" id="nickname" placeholder="Enter nickname">
+                <p>Enter your message:</p>
+                <input type="text" id="m" placeholder="Enter message">
+            </div>
+            <div class="room-container">
+                <p>Select room:</p>
+                <select id="room">
+                    <option value="yleinen">Yleinen</option>
+                    <option value="urheilu">Urheilu</option>
+                    <option value="opiskelu">Opiskelu</option>
+                    <option value="ura">Ura</option>
+                    <option value="matkailu">Matkailu</option>
+                    <option value="musiikki">Musiikki</option>
+                    <option value="taide">Taide</option>
+                    <option value="elokuvat">Elokuvat</option>
+                    <option value="pelit">Pelit</option>
+                    <option value="teknologia">Teknologia</option>
+                    <option value="terveys">Terveys</option>
+                    <option value="ruoka">Ruoka</option>
+                    <option value="kauneus">Kauneus</option>
+                </select>
+            </div>
+        </div>
+        <p style="text-align: center;">Send the message</p>
+        <button type="submit">Send</button>
+        <ul id="messages"></ul>
+    </form>
+</body>
+</html>
